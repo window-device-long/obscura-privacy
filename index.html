@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="Privacy Policy for Obscura, a minesweeper game.">
+  <title>Privacy Policy | Obscura</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f2f0e9;
+      --ink: #20251f;
+      --muted: #62685f;
+      --line: #c9cbc0;
+      --accent: #bd4e32;
+      --accent-dark: #873a28;
+      --panel: #e5e7de;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .masthead {
+      border-bottom: 1px solid var(--line);
+      padding: 22px max(24px, calc((100vw - 1320px) / 2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .masthead-note, .eyebrow, .meta, .section-index, .label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .masthead-note { color: var(--muted); }
+    .layout {
+      width: min(1320px, 100%);
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+      display: grid;
+      grid-template-columns: minmax(190px, 245px) minmax(0, 780px);
+      gap: clamp(42px, 8vw, 132px);
+      align-items: start;
+    }
+    .contents {
+      position: sticky;
+      top: 28px;
+      padding-top: 8px;
+    }
+    .contents h2, .contents summary {
+      margin: 0 0 15px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .contents ol { margin: 0; padding: 0; list-style: none; counter-reset: toc; }
+    .contents li { counter-increment: toc; border-top: 1px solid var(--line); }
+    .contents a {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 7px;
+      padding: 9px 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+    .contents a::before { content: counter(toc, decimal-leading-zero); color: var(--accent); font-variant-numeric: tabular-nums; }
+    .contents a:hover { color: var(--ink); }
+    .contents details > summary { display: none; cursor: pointer; }
+    main { min-width: 0; }
+    .eyebrow { color: var(--accent-dark); margin: 0 0 16px; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.16; }
+    h1 { max-width: 740px; margin: 0; font-size: clamp(44px, 6vw, 76px); }
+    .lede { max-width: 640px; margin: 22px 0 28px; color: #444a42; font-size: 19px; line-height: 1.55; }
+    .meta { color: var(--muted); letter-spacing: .03em; text-transform: none; }
+    .draft {
+      margin: 30px 0 52px;
+      padding: 17px 20px;
+      border-left: 4px solid var(--accent);
+      background: var(--panel);
+      color: #343a32;
+      font-size: 14px;
+    }
+    .draft strong { color: var(--accent-dark); }
+    section { padding: 34px 0 38px; border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+    .section-index { color: var(--accent); margin: 0 0 12px; }
+    h2 { margin: 0 0 18px; font-size: 32px; }
+    h3 { margin: 28px 0 10px; font-size: 22px; }
+    p { margin: 0 0 14px; }
+    ul { margin: 10px 0 18px; padding-left: 22px; }
+    li { padding-left: 4px; margin: 5px 0; }
+    .table-wrap { width: 100%; overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.55; }
+    th, td { padding: 12px 13px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--panel); font-size: 12px; letter-spacing: .04em; }
+    .small { color: var(--muted); font-size: 14px; }
+    .contact {
+      padding: 20px 22px;
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .contact a { color: #f1a38c; }
+    .contact p:last-child { margin-bottom: 0; }
+    .developer-note {
+      margin-top: 56px;
+      padding: 22px;
+      border: 1px dashed var(--accent-dark);
+      background: #eee4d8;
+      font-size: 14px;
+    }
+    .developer-note h2 { font-family: var(--sans); font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .developer-note ul { margin-bottom: 0; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px max(24px, calc((100vw - 1320px) / 2));
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 760px) {
+      .masthead { padding: 17px 20px; }
+      .masthead-note { max-width: 120px; text-align: right; }
+      .layout { display: block; padding: 38px 20px 64px; }
+      .contents { position: static; margin-bottom: 38px; padding: 0; }
+      .contents details { border: 1px solid var(--line); }
+      .contents details > summary { display: block; margin: 0; padding: 12px 14px; }
+      .contents details[open] > summary { border-bottom: 1px solid var(--line); }
+      .contents ol { padding: 0 14px 10px; }
+      .contents li:first-child { border-top: 0; }
+      .contents a { padding: 8px 0; }
+      .lede { font-size: 17px; }
+      h2 { font-size: 28px; }
+      section { padding: 28px 0 32px; }
+      footer { padding: 20px; }
+    }
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      .masthead, .contents, .developer-note { display: none; }
+      .layout { display: block; width: auto; padding: 0; }
+      h1 { font-size: 36pt; }
+      section { break-inside: avoid; }
+      a { color: inherit; }
+      .contact { background: #eee; color: #111; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="Obscura, top of page">Obscura</a>
+    <span class="masthead-note">Minesweeper · Privacy</span>
+  </header>
+
+  <div class="layout" id="top">
+    <nav class="contents" aria-label="Privacy policy contents">
+      <details open>
+        <summary>Contents</summary>
+        <ol>
+          <li><a href="#en-data">Data we may process</a></li>
+          <li><a href="#en-purposes">Purposes and legal bases</a></li>
+          <li><a href="#en-providers">Recipients and SDKs</a></li>
+          <li><a href="#en-retention">Retention and transfers</a></li>
+          <li><a href="#en-rights-vn">Rights in Vietnam</a></li>
+          <li><a href="#en-rights-other">Rights in other regions</a></li>
+          <li><a href="#en-children">Children</a></li>
+          <li><a href="#en-security">Security and incidents</a></li>
+          <li><a href="#en-changes">Updates and contact</a></li>
+          <li><a href="#en-legal">Legal framework</a></li>
+        </ol>
+      </details>
+    </nav>
+
+    <main>
+      <p class="eyebrow">Obscura / Legal information</p>
+      <h1>Privacy<br>Policy</h1>
+      <p class="lede">This Policy explains what information may be processed when you play Obscura, why it is processed, and how you can exercise your privacy rights.</p>
+      <p class="meta">Updated: October 5, 2026 · Applies to the Obscura game and related services</p>
+
+      <aside class="draft" aria-label="Draft notice">
+        <strong>Before publication:</strong> This is a draft based on the information currently available. The app's advertising, analytics, sign-in, cloud storage, and release configuration have not been provided. Keep only the disclosures that match the shipped app. Conditional examples below do not confirm that Obscura collects that information.
+      </aside>
+
+      <section id="en-data">
+        <p class="section-index">01 / Data scope</p>
+        <h2>Data we may process</h2>
+        <p>The actual categories depend on the features enabled in the version of Obscura you use. The core minesweeper game does not need your real name, contacts, precise location, or microphone. We will not request those permissions unless a specific feature explains why it needs them and asks for permission appropriately.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Data category</th><th>Examples</th><th>When it may arise</th></tr></thead>
+            <tbody>
+              <tr><td>Gameplay data</td><td>Progress, completed levels, play time, settings, and statistics</td><td>If stored on your device, linked to an account, or synced to the cloud.</td></tr>
+              <tr><td>Technical data</td><td>App version, operating system, device type, crash logs, device or advertising identifiers</td><td>If analytics, crash-reporting, advertising, or platform service SDKs are integrated.</td></tr>
+              <tr><td>Transactions</td><td>Transaction reference, purchase status, purchased item</td><td>If in-app purchases are offered; the store processes payment details under its own policy.</td></tr>
+              <tr><td>Support messages</td><td>Email address, message contents, attachments, and details needed to handle your request</td><td>When you contact the developer.</td></tr>
+              <tr><td>Advertising data</td><td>Advertising identifier, impressions/interactions, and ad preferences</td><td>Only if the app includes ads or an advertising SDK.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Information you include in an email may contain personal data. Please do not send passwords, full payment details, or unnecessary sensitive information.</p>
+      </section>
+
+      <section id="en-purposes">
+        <p class="section-index">02 / Use of data</p>
+        <h2>Purposes and legal bases</h2>
+        <p>We process only information needed for the purposes described and under a legal basis appropriate to your location and the feature you use. In Vietnam, consent is an important basis; processing without consent is limited to specific statutory grounds. Where the GDPR applies, possible bases include performance of a contract, legal obligations, consent, or legitimate interests after balancing your rights.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Purpose</th><th>Relevant data</th><th>Possible legal basis</th></tr></thead>
+            <tbody>
+              <tr><td>Provide the game and save progress</td><td>Gameplay data and settings</td><td>Provide the service or feature you request; consent where required by law.</td></tr>
+              <tr><td>Fix errors, protect the service, and prevent abuse</td><td>Technical logs and minimal event data</td><td>Legitimate interests under the GDPR where applicable; an appropriate legal basis under local law.</td></tr>
+              <tr><td>Measure and improve the experience</td><td>Usage events, device identifiers, or aggregated data</td><td>Consent where required, or another assessed and disclosed legal basis.</td></tr>
+              <tr><td>Show advertisements</td><td>Advertising identifiers and interactions</td><td>Only if an advertising SDK is present; consent or permission as required by law and platform rules.</td></tr>
+              <tr><td>Respond to support requests</td><td>Email and message contents</td><td>Respond to your request; legal obligations where applicable.</td></tr>
+              <tr><td>Comply with law and resolve disputes</td><td>Relevant records as necessary</td><td>Legal obligations or protection of legal rights under applicable law.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small">Installing the game alone is not treated as consent to a new purpose. If an optional feature needs data, you may decline and continue using the core game unless that data is genuinely necessary for the feature itself.</p>
+      </section>
+
+      <section id="en-providers">
+        <p class="section-index">03 / Sharing</p>
+        <h2>Recipients and SDKs</h2>
+        <p>Information is provided to processors needed to operate a feature, under appropriate instructions and agreements, or when required by law. Before publication, the developer must review each SDK and advertising arrangement to determine whether it constitutes a “sale” or “sharing” under applicable law. The groups below may be relevant; they are not confirmation that each is integrated:</p>
+        <ul>
+          <li><strong>Apple App Store / Google Play:</strong> app distribution, payment processing, reporting, and platform services; the provider may receive data directly from your device.</li>
+          <li><strong>Analytics and crash reporting:</strong> only if the relevant SDK is enabled; identify each provider, data category, purpose, and provider policy before release.</li>
+          <li><strong>Advertising:</strong> only if ads are present; disclose the ad network and appropriate consent or opt-out controls by region.</li>
+          <li><strong>Cloud storage or sign-in:</strong> only if accounts, sync, or backup are available; identify the provider and data stored.</li>
+          <li><strong>Public authorities:</strong> where legally required or necessary to protect safety, rights, or property as permitted by law.</li>
+        </ul>
+        <p>Third-party providers have their own privacy policies. Apple or Google may collect device or store data independently of data received by the developer.</p>
+      </section>
+
+      <section id="en-retention">
+        <p class="section-index">04 / Data lifecycle</p>
+        <h2>Retention and transfers</h2>
+        <p>Data is retained for as long as needed to provide a feature, handle support requests, meet record-keeping obligations, or resolve disputes. When no longer needed, it is deleted, anonymized, or securely destroyed under the applicable process. Progress stored only on your device may be lost if you uninstall the app, clear its data, or change devices. Cloud copies, if any, must be deleted through the relevant feature's process.</p>
+        <p>Before publication, set actual retention periods for logs, analytics, transactions, and support emails based on the app configuration and provider agreements.</p>
+        <p>If data is processed or stored outside your country or region, transfers will be made only when applicable legal requirements are met, including any required assessments, safeguards, or notices. Disclose the storage locations and transfer mechanisms used by actual providers.</p>
+      </section>
+
+      <section id="en-rights-vn">
+        <p class="section-index">05 / Your rights</p>
+        <h2>Rights under Vietnamese law</h2>
+        <p>Where Vietnam's Personal Data Protection Law No. 91/2025/QH15 applies, you may exercise the rights provided by law, including the right to be informed; consent, refuse, or withdraw consent; access and request correction; request provision, deletion, or restriction of processing; object to processing; complain, denounce, bring legal proceedings, and claim compensation subject to statutory conditions.</p>
+        <p>Send a request to <a href="mailto:longnpdevmobile@gmail.com">longnpdevmobile@gmail.com</a> with the subject “Obscura Privacy Request.” Describe the request and provide enough information for us to locate the relevant data. We may verify your identity proportionately, request necessary details, and respond within the period required by law. Requests may be limited where permitted by law or where retention is required.</p>
+        <p>Withdrawing consent does not affect the lawfulness of processing that occurred before withdrawal. Refusing data needed for a feature may prevent that feature from working.</p>
+      </section>
+
+      <section id="en-rights-other">
+        <p class="section-index">06 / By region</p>
+        <h2>Rights in the EU, EEA, UK, and California</h2>
+        <h3>Where the GDPR applies</h3>
+        <p>You may have the right to access, correct, erase, restrict, or object to processing; receive data in a portable format; withdraw consent; and complain to a supervisory authority. Some rights depend on the legal basis and statutory exceptions. If we rely on legitimate interests, you may request information about those interests and object where the law allows.</p>
+        <h3>Where California law applies</h3>
+        <p>Eligible consumers may request to know, access, delete, or correct personal information; opt out of “sale” or “sharing” as defined by the CCPA (including certain cross-context behavioral advertising); limit the use of sensitive personal information where applicable; and not be discriminated against for exercising their rights. Obscura will provide an appropriate request or opt-out mechanism if the app's activities fall within the law's scope.</p>
+        <p>To make a request, contact the privacy email above. We will verify reasonable requests without collecting more information than necessary. An authorized agent may need to demonstrate authority. You may appeal a refusal under the process and deadlines required by applicable law.</p>
+      </section>
+
+      <section id="en-children">
+        <p class="section-index">07 / Age</p>
+        <h2>Children and family accounts</h2>
+        <p>Obscura does not knowingly collect children's personal data without the consent or other authorization required. If the app is designed for or marketed to children, the developer must separately review age rules, parental or guardian consent, advertising, SDKs, and app-store distribution requirements before release.</p>
+        <p>The age at which parental consent is required under the GDPR may vary by country. The US COPPA imposes specific obligations on services directed to children under 13 or that knowingly collect data from children under 13. If you are a parent or guardian and believe a child has submitted data, contact us at the email above.</p>
+      </section>
+
+      <section id="en-security">
+        <p class="section-index">08 / Protection</p>
+        <h2>Security and data incidents</h2>
+        <p>We apply technical and organizational safeguards appropriate to the data and risks, such as limiting access, minimizing data, protecting transmissions, and reviewing providers. No storage or transmission method can be guaranteed completely secure.</p>
+        <p>If an incident occurs, we will assess and contain it and meet applicable duties to notify users or authorities within the circumstances and time limits required by law.</p>
+      </section>
+
+      <section id="en-changes">
+        <p class="section-index">09 / Updates</p>
+        <h2>Policy changes</h2>
+        <p>We will update the revision date on this page. If a change materially affects purposes, data categories, or your rights, we will provide notice by an appropriate method before or when the change takes effect, as required by law. Continued use of the app does not replace new consent where the law requires it.</p>
+        <div class="contact">
+          <h3>Privacy contact</h3>
+          <p>Send questions or requests to <a href="mailto:longnpdevmobile@gmail.com">longnpdevmobile@gmail.com</a>.</p>
+          <p class="small">Please include “Obscura – Privacy” in the subject line.</p>
+        </div>
+      </section>
+
+      <section id="en-legal">
+        <p class="section-index">10 / Legal framework</p>
+        <h2>Legal references</h2>
+        <p>Applicability depends on where you live, where the service is offered, the data involved, and the developer's activities and size. Listing a law does not mean it applies to every user or every version of Obscura.</p>
+        <ul>
+          <li><strong>Vietnam:</strong> Personal Data Protection Law No. 91/2025/QH15, effective January 1, 2026; Cybersecurity Law No. 24/2018/QH14 and related implementing instruments where applicable; Law on Protection of Consumers' Rights No. 19/2023/QH15 and applicable e-commerce/app rules. Search the <a href="https://vbpl.vn/Pages/portal.aspx">Vietnam National Legal Database</a>.</li>
+          <li><strong>European Union/EEA:</strong> Regulation (EU) 2016/679 (GDPR), where the processing falls within its territorial scope. <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng">GDPR text on EUR-Lex</a>.</li>
+          <li><strong>United Kingdom:</strong> UK GDPR and the Data Protection Act 2018, where applicable. <a href="https://www.legislation.gov.uk/ukpga/2018/12/contents">Data Protection Act 2018</a>.</li>
+          <li><strong>California, United States:</strong> California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), if the developer is within scope. <a href="https://oag.ca.gov/privacy/ccpa">CCPA information from the California DOJ</a>.</li>
+          <li><strong>Children in the United States:</strong> Children's Online Privacy Protection Act (COPPA) and related rules if the service is within scope. <a href="https://www.ftc.gov/legal-library/browse/rules/childrens-online-privacy-protection-rule-coppa">COPPA Rule from the FTC</a>.</li>
+          <li><strong>App stores:</strong> Apple App Store and Google Play privacy disclosures, data labels, and child-safety requirements. These platform requirements do not replace legal obligations.</li>
+        </ul>
+        <p class="small">Laws and obligations may change. This Policy is privacy information, not legal advice or confirmation that a particular compliance regime has been satisfied.</p>
+      </section>
+
+      <aside class="developer-note" aria-label="Developer checklist">
+        <h2>Developer checklist · Remove this block before publication</h2>
+        <ul>
+          <li>Check whether each release market requires the identity of the data controller or additional contact details.</li>
+          <li>Inventory every SDK in the iOS/Android release: advertising, analytics, crash reports, sign-in, payments, and cloud; reconcile actual data practices with this Policy and store disclosures.</li>
+          <li>Confirm whether the app is offline or online, its permissions, local/cloud storage, retention periods, providers, and storage countries.</li>
+          <li>Decide whether the game is directed to children; review consent, ads, account/data deletion, and request handling.</li>
+          <li>Check legal bases, international transfers, incident notices, and response deadlines under the laws that actually apply.</li>
+          <li>Align this Policy with the shipped build, Apple/Google privacy forms, and support pages; obtain review from counsel in the release markets before treating it as final.</li>
+        </ul>
+      </aside>
+    </main>
+  </div>
+
+  <footer>Obscura · Privacy Policy · Updated October 5, 2026</footer>
+</body>
+</html>
